@@ -1,2 +1,2 @@
 var WAVE_CONFIG = {}
-WAVE_CONFIG.url = 'http://localhost:3000'
+WAVE_CONFIG.url = 'http://localhost:4567'

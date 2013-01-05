@@ -1,2 +1,5 @@
-var WAVE_CONFIG = {}
-WAVE_CONFIG.url = 'http://localhost:4567'
+$.extend(true, W.options, {
+  url: {
+    root: 'http://localhost:4567'
+  }
+})

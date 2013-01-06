@@ -8,16 +8,17 @@ W.options = {
 }
 
 W.fetch = function(){
-  var url = chrome.extension.getURL(''+W.options.url.root+W.options.url.news)
-  $.ajax({
-    url: url
-    success: function(data){
-    console.log('a')
-    zz = data
-    console.log(data)
-    localStorage.news = JSON.stringify(data.news)
+  var url = ''+W.options.url.root+W.options.url.news
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', url, true);
+  xhr.onreadystatechange = function() {
+    if(xhr.readyState == 4){
+      console.log('fetch')
+      var data = JSON.parse(xhr.responseText);
+      localStorage.news = JSON.stringify(data.posts)
+    }
   }
-})
+  xhr.send();
 }
 
 W.render = function(posts) {

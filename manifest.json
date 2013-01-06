@@ -8,7 +8,7 @@
   },
   "permissions": ["tabs", "http://*/*", "https://*/*"],
   "background": {
-    "scripts": ["plugins/jquery.js", "js/application.js", "js/background.js"]
+    "scripts": ["plugins/jquery.js", "js/application.js", "config.js", "js/background.js"]
   },
   "options_page": "options.html",
   "manifest_version": 2

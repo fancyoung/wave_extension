@@ -9,13 +9,15 @@ W.options = {
 
 W.fetch = function(){
   var url = ''+W.options.url.root+W.options.url.news
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', url, true);
+  var xhr = new XMLHttpRequest()
+  xhr.open('GET', url, true)
   xhr.onreadystatechange = function() {
     if(xhr.readyState == 4){
       console.log('fetch')
-      var data = JSON.parse(xhr.responseText);
-      localStorage.news = JSON.stringify(data)
+      var posts = JSON.parse(xhr.responseText)
+      localStorage.news = JSON.stringify(posts)
+      chrome.browserAction.setBadgeText({text: ''+posts.length});
+
     }
   }
   xhr.send();

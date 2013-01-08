@@ -1,1 +1,3 @@
-W.fetch()
+setInterval(function(){
+  W.fetch()
+}, 10000)

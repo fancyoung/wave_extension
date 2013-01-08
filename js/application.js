@@ -15,7 +15,7 @@ W.fetch = function(){
     if(xhr.readyState == 4){
       console.log('fetch')
       var data = JSON.parse(xhr.responseText);
-      localStorage.news = JSON.stringify(data.posts)
+      localStorage.news = JSON.stringify(data)
     }
   }
   xhr.send();

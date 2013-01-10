@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "新闻"
+  },
+  "extDescription": {
+    "message": "这是一个新闻插件"
+  },
+  "readAll": {
+    "message": "全部标记为已读"
+  }
+}

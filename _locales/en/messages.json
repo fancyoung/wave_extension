@@ -1,0 +1,11 @@
+{
+  "extName": {
+    "message": "Wave"
+  },
+  "extDescription": {
+    "message": "This is a wave Extension"
+  },
+  "readAll": {
+    "message": "Read All"
+  }
+}
